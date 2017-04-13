@@ -4,6 +4,7 @@ import bcolz
 import numpy as np
 import pandas as pd
 import os
+from datetime import datetime
 
 class StockDataProvider():
 	def __init__(self):
@@ -99,7 +100,19 @@ class StockDataProvider():
 
 		return ret
 
+def test_day():
+	security = '000001.XSHE'
+	start_dt = datetime.datetime(2010, 07, 02)
+	ednd_dt = datetime.datetime(2010,10,10)
+	field_list = ['open', 'close']
+	unit = '1d'
 
+	ret = get_bars(security, start_dt, end_dt, unit, field_list)
+
+	print ret
+
+if __name__ == '__main__':
+	test_day()
 
 
 
