@@ -34,7 +34,7 @@ def test_minute1():
     ret = stock_data_provider.get_bars(security, start_dt, end_dt, unit, field_list=['open', 'close', 'volume', 'money'], skip_paused = False, fq = None)
     print ret
 
-    """# 测试数据3 start_dt 为2016-07-26(停牌时间) end_dt在2016－07-29之后
+    # 测试数据3 start_dt 为2016-07-26(停牌时间) end_dt在2016－07-29之后
     # 测试程序对起始日期恰好停牌的处理
     start_dt = datetime(2016,7,26,9,40)
     end_dt = datetime(2016,7,30,16,00)
@@ -46,7 +46,7 @@ def test_minute1():
     start_dt = datetime(2016,7,24)
     end_dt = datetime(2016,7,30)
     ret = stock_data_provider.get_bars(security, start_dt, end_dt, unit, field_list=['open', 'close', 'volume', 'money'], skip_paused = False, fq = None)
-    #print ret"""
+    print ret
 
     
 def test_day():
